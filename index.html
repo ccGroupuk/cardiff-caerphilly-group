@@ -96,6 +96,7 @@
         .actions { display: flex; flex-wrap: wrap; gap: 12px; }
         .emergency { margin-top: 22px; display: inline-flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--muted); }
         .emergency a { color: var(--white); font-weight: 700; text-decoration: none; }
+        .emergency a.em-wa { color: var(--yellow); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
         .emergency .pulse { width: 10px; height: 10px; border-radius: 50%; background: #ef4444; box-shadow: 0 0 0 0 rgba(239,68,68,.6); animation: pulse 2s infinite; }
         @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(239,68,68,0); } 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); } }
         .hero-photo { position: relative; }
@@ -130,7 +131,10 @@
         .trade h3 { font-size: 1.6rem; font-weight: 700; margin-top: 2px; }
         .trade .tags { color: var(--ink-muted); margin-top: 6px; font-size: 0.98rem; }
         .trade .tags i { font-style: normal; color: var(--yellow-dark); margin: 0 6px; }
-        .trade .foot { margin-top: auto; padding-top: 16px; display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--line); margin-top: 18px; }
+        .trade .msg { margin-top: 18px; display: flex; align-items: center; justify-content: center; gap: 9px; background: var(--black); color: var(--white); border-radius: 10px; padding: 12px 14px; font-weight: 700; text-decoration: none; transition: background .12s; }
+        .trade .msg svg { color: #25D366; }
+        .trade .msg:hover { background: var(--black-3); }
+        .trade .foot { margin-top: auto; padding-top: 16px; display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--line); margin-top: 14px; }
         .trade .foot a.tel { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.25rem; text-decoration: none; }
         .trade .foot a.site { font-size: 0.9rem; font-weight: 600; color: var(--gold-ink); text-decoration: none; white-space: nowrap; }
         .trade .foot a.site:hover { text-decoration: underline; }
@@ -247,7 +251,7 @@
         </a>
         <nav>
             <a class="btn btn-outline" href="tel:+447803083422"><svg class="i"><use href="#i-phone"/></svg>07803 083422</a>
-            <a class="btn btn-yellow" href="https://wa.me/447545514746"><svg class="i solid"><use href="#i-wa"/></svg>WhatsApp</a>
+            <a class="btn btn-yellow" href="https://wa.me/447545514746?text=Hi%2C%20I%27m%20contacting%20you%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website%20-%20general%20enquiry."><svg class="i solid"><use href="#i-wa"/></svg>WhatsApp</a>
         </nav>
     </div>
 </header>
@@ -260,10 +264,10 @@
             <h1>Your home, <em>from the ground up.</em></h1>
             <p class="lead">Five specialists who work together across Cardiff and Caerphilly. <b>Call the one you need</b>, or let us join them up for a bigger job.</p>
             <div class="actions">
-                <a class="btn btn-yellow" href="https://wa.me/447545514746"><svg class="i solid"><use href="#i-wa"/></svg>WhatsApp 07545 514746</a>
+                <a class="btn btn-yellow" href="https://wa.me/447545514746?text=Hi%2C%20I%27m%20contacting%20you%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website%20-%20general%20enquiry."><svg class="i solid"><use href="#i-wa"/></svg>WhatsApp 07545 514746</a>
                 <a class="btn btn-outline" href="tel:+447803083422"><svg class="i"><use href="#i-phone"/></svg>Call direct 07803 083422</a>
             </div>
-            <p class="emergency"><span class="pulse"></span>24hr emergency call-out: <a href="tel:+442921690437">029 2169 0437</a></p>
+            <p class="emergency"><span class="pulse"></span>24hr emergency call-out: <a href="tel:+442921690437">029 2169 0437</a> <a class="em-wa" href="https://wa.me/447545514746?text=EMERGENCY%20-%20I%20need%20help%20now%20-%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website.">or WhatsApp</a></p>
         </div>
         <div class="hero-photo">
             <img src="/assets/images/kitchen-fitted-navy.webp" width="1200" height="1600" alt="A navy shaker kitchen with white worktops, fitted by our team">
@@ -298,6 +302,7 @@
                     <div class="verb">Build it</div>
                     <h3>Construction</h3>
                     <div class="tags">Extensions<i>·</i>Lofts<i>·</i>Renovations</div>
+                    <a class="msg" href="https://wa.me/447545514746?text=Hi%2C%20I%27m%20contacting%20you%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website%20-%20Construction%20enquiry."><svg class="i solid"><use href="#i-wa"/></svg>Message Construction</a>
                     <div class="foot"><a class="tel" href="tel:+442921690523">029 2169 0523</a><a class="site" href="https://www.cardiffandcaerphillyconstruction.co.uk">Visit site &rarr;</a></div>
                 </div>
             </article>
@@ -307,6 +312,7 @@
                     <div class="verb">Fit it out</div>
                     <h3>Carpentry</h3>
                     <div class="tags">Wardrobes<i>·</i>Media walls<i>·</i>Storage</div>
+                    <a class="msg" href="https://wa.me/447545514746?text=Hi%2C%20I%27m%20contacting%20you%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website%20-%20Carpentry%20enquiry."><svg class="i solid"><use href="#i-wa"/></svg>Message Carpentry</a>
                     <div class="foot"><a class="tel" href="tel:+447803083422">07803 083422</a><a class="site" href="https://www.cardiffandcaerphillycarpentry.com">Visit site &rarr;</a></div>
                 </div>
             </article>
@@ -316,6 +322,7 @@
                     <div class="verb">Power it</div>
                     <h3>Electricians</h3>
                     <div class="tags">Rewires<i>·</i>Lighting<i>·</i>EV chargers</div>
+                    <a class="msg" href="https://wa.me/447545514746?text=Hi%2C%20I%27m%20contacting%20you%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website%20-%20Electricians%20enquiry."><svg class="i solid"><use href="#i-wa"/></svg>Message Electricians</a>
                     <div class="foot"><a class="tel" href="tel:+442921690502">029 2169 0502</a><a class="site" href="https://www.cardiff-electricians.co.uk">Visit site &rarr;</a></div>
                 </div>
             </article>
@@ -325,6 +332,7 @@
                     <div class="verb">Plumb &amp; heat it</div>
                     <h3>Plumbers</h3>
                     <div class="tags">Leaks<i>·</i>Boilers<i>·</i>Bathrooms</div>
+                    <a class="msg" href="https://wa.me/447545514746?text=Hi%2C%20I%27m%20contacting%20you%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website%20-%20Plumbers%20enquiry."><svg class="i solid"><use href="#i-wa"/></svg>Message Plumbers</a>
                     <div class="foot"><a class="tel" href="tel:+442921690437">029 2169 0437</a><a class="site" href="https://www.cardiffandcaerphillyplumbers.com">Visit site &rarr;</a></div>
                 </div>
             </article>
@@ -334,6 +342,7 @@
                     <div class="verb">Finish outside</div>
                     <h3>Landscaping</h3>
                     <div class="tags">Patios<i>·</i>Fencing<i>·</i>Gardens</div>
+                    <a class="msg" href="https://wa.me/447545514746?text=Hi%2C%20I%27m%20contacting%20you%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website%20-%20Landscaping%20enquiry."><svg class="i solid"><use href="#i-wa"/></svg>Message Landscaping</a>
                     <div class="foot"><a class="tel" href="tel:+442921690437">029 2169 0437</a><a class="site" href="https://www.cardiffandcaerphillylandscaping.co.uk">Visit site &rarr;</a></div>
                 </div>
             </article>
@@ -404,7 +413,7 @@
             <h2>Talk to us <em>today.</em></h2>
             <p class="lead">Send a photo of the job on WhatsApp and we'll pass it to the right trade. Or call, we're happy to talk it through.</p>
             <div class="lines">
-                <a class="line" href="https://wa.me/447545514746"><span class="lbl">WhatsApp any trade</span><span class="num">07545 514746</span></a>
+                <a class="line" href="https://wa.me/447545514746?text=Hi%2C%20I%27m%20contacting%20you%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website%20-%20general%20enquiry."><span class="lbl">WhatsApp any trade</span><span class="num">07545 514746</span></a>
                 <a class="line" href="tel:+447803083422"><span class="lbl">Call direct</span><span class="num">07803 083422</span></a>
                 <a class="line hot" href="tel:+442921690437"><span class="lbl">24hr emergency call-out</span><span class="num">029 2169 0437</span></a>
             </div>
@@ -432,7 +441,7 @@
 </footer>
 
 <div class="callbar">
-    <a class="btn btn-yellow" href="https://wa.me/447545514746"><svg class="i solid"><use href="#i-wa"/></svg>WhatsApp</a>
+    <a class="btn btn-yellow" href="https://wa.me/447545514746?text=Hi%2C%20I%27m%20contacting%20you%20from%20the%20Cardiff%20%26%20Caerphilly%20Group%20website%20-%20general%20enquiry."><svg class="i solid"><use href="#i-wa"/></svg>WhatsApp</a>
     <a class="btn btn-outline" href="tel:+447803083422"><svg class="i"><use href="#i-phone"/></svg>Call us</a>
 </div>
 
