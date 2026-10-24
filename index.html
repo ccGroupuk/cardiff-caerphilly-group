@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardiff &amp; Caerphilly Group | Carpentry, Construction, Plumbing, Electrical &amp; Landscaping</title>
-    <meta name="description" content="One local team for your whole home. Cardiff &amp; Caerphilly Carpentry, Construction, Plumbers, Electricians and Landscaping, working together across Cardiff and Caerphilly.">
+    <meta name="description" content="Five specialist trades, one local team. Cardiff &amp; Caerphilly Construction, Carpentry, Electricians, Plumbers and Landscaping, working together across Cardiff and Caerphilly. 24hr emergency call-out.">
     <link rel="canonical" href="https://www.cardiffandcaerphillygroup.co.uk/">
     <link rel="icon" type="image/svg+xml" href="/assets/logo-mark.svg">
     <meta property="og:title" content="Cardiff &amp; Caerphilly Group">
-    <meta property="og:description" content="One local team for your whole home: carpentry, construction, plumbing, electrical and landscaping.">
+    <meta property="og:description" content="Five specialist trades, one local team: construction, carpentry, electrical, plumbing and landscaping.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.cardiffandcaerphillygroup.co.uk/">
     <meta property="og:image" content="https://www.cardiffandcaerphillygroup.co.uk/assets/logo.png">
+    <meta name="theme-color" content="#161415">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/assets/images/kitchen-fitted-navy.webp" fetchpriority="high">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -22,12 +24,17 @@
         "name": "Cardiff & Caerphilly Group",
         "url": "https://www.cardiffandcaerphillygroup.co.uk/",
         "logo": "https://www.cardiffandcaerphillygroup.co.uk/assets/logo.png",
+        "telephone": "+447803083422",
         "areaServed": ["Cardiff", "Caerphilly"],
+        "contactPoint": [
+            { "@type": "ContactPoint", "telephone": "+447803083422", "contactType": "customer service", "areaServed": "GB", "availableLanguage": "English" },
+            { "@type": "ContactPoint", "telephone": "+442921690437", "contactType": "emergency", "areaServed": "GB", "hoursAvailable": "Mo-Su 00:00-23:59" }
+        ],
         "subOrganization": [
-            { "@type": "HomeAndConstructionBusiness", "name": "Cardiff & Caerphilly Carpentry", "url": "https://www.cardiffandcaerphillycarpentry.com", "telephone": "+447803083422" },
             { "@type": "GeneralContractor", "name": "Cardiff & Caerphilly Construction", "url": "https://www.cardiffandcaerphillyconstruction.co.uk", "telephone": "+442921690523" },
-            { "@type": "Plumber", "name": "Cardiff & Caerphilly Plumbers", "url": "https://www.cardiffandcaerphillyplumbers.com", "telephone": "+442921690437" },
+            { "@type": "HomeAndConstructionBusiness", "name": "Cardiff & Caerphilly Carpentry", "url": "https://www.cardiffandcaerphillycarpentry.com", "telephone": "+447803083422" },
             { "@type": "Electrician", "name": "Cardiff & Caerphilly Electricians", "url": "https://www.cardiff-electricians.co.uk", "telephone": "+442921690502" },
+            { "@type": "Plumber", "name": "Cardiff & Caerphilly Plumbers", "url": "https://www.cardiffandcaerphillyplumbers.com", "telephone": "+442921690437" },
             { "@type": "HomeAndConstructionBusiness", "name": "Cardiff & Caerphilly Landscaping", "url": "https://www.cardiffandcaerphillylandscaping.co.uk", "telephone": "+442921690437" }
         ]
     }
@@ -39,168 +46,396 @@
             --black-3: #2c2829;
             --yellow: #F5C518;
             --yellow-dark: #d9ab00;
+            --gold-ink: #8a6d00;
             --white: #ffffff;
+            --cream: #faf7ef;
+            --line: #e7e2d6;
+            --ink-muted: #57534e;
             --muted: rgba(255,255,255,0.68);
             --faint: rgba(255,255,255,0.12);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', system-ui, sans-serif; background: var(--black); color: var(--white); line-height: 1.6; }
+        html { scroll-behavior: smooth; }
+        section[id] { scroll-margin-top: 76px; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
         a { color: inherit; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        h1, h2, h3 { font-family: 'Outfit', system-ui, sans-serif; line-height: 1.15; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { font-family: 'Outfit', system-ui, sans-serif; line-height: 1.08; letter-spacing: -0.01em; }
+        .eyebrow { color: var(--yellow); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; }
+        .light .eyebrow { color: var(--gold-ink); }
+        svg.i { width: 1.25em; height: 1.25em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+        svg.i.solid { fill: currentColor; stroke: none; }
 
-        .hero { text-align: center; padding: 72px 0 56px; }
-        .hero .mark { width: 120px; height: auto; margin-bottom: 28px; }
-        .hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 800; color: var(--yellow); text-transform: uppercase; letter-spacing: 0.01em; }
-        .hero h1 span { display: block; color: var(--white); font-weight: 600; font-size: 0.45em; letter-spacing: 0.32em; margin-top: 10px; }
-        .hero p.lead { font-size: 1.2rem; color: var(--muted); max-width: 620px; margin: 24px auto 32px; }
-        .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 26px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1rem; }
+        .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 1rem; transition: transform .12s, background .12s, border-color .12s; }
+        .btn:hover { transform: translateY(-1px); }
         .btn-yellow { background: var(--yellow); color: var(--black); }
         .btn-yellow:hover { background: var(--yellow-dark); }
         .btn-outline { border: 1.5px solid rgba(255,255,255,0.35); color: var(--white); }
         .btn-outline:hover { border-color: var(--white); }
+        .btn-dark { background: var(--black); color: var(--white); }
 
-        .stats { background: var(--black-2); border-top: 1px solid var(--faint); border-bottom: 1px solid var(--faint); }
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; padding: 28px 0; gap: 16px; }
-        .stat-num { display: block; font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; color: var(--yellow); }
-        .stat-label { font-size: 0.9rem; color: var(--muted); }
+        /* header */
+        .topbar { position: sticky; top: 0; z-index: 20; background: rgba(22,20,21,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--faint); }
+        .topbar .container { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 12px; }
+        .lockup { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .lockup img { width: 38px; height: auto; }
+        .lockup .name { font-family: 'Outfit', sans-serif; font-weight: 800; text-transform: uppercase; line-height: 0.95; font-size: 0.98rem; color: var(--yellow); }
+        .lockup .name span { display: block; color: var(--white); font-weight: 600; font-size: 0.62rem; letter-spacing: 0.42em; margin-top: 3px; }
+        .topbar nav { display: flex; gap: 8px; align-items: center; }
+        .topbar .btn { padding: 10px 16px; font-size: 0.92rem; }
 
-        .section { padding: 72px 0; }
-        .section-header { text-align: center; max-width: 640px; margin: 0 auto 40px; }
-        .eyebrow { color: var(--yellow); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
-        .section-header h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 12px; }
-        .section-header p { color: var(--muted); }
+        /* hero */
+        .hero { position: relative; overflow: hidden; }
+        .hero .chev { position: absolute; right: -120px; top: -80px; width: 520px; opacity: 0.06; pointer-events: none; }
+        .hero-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 56px; align-items: center; padding-top: 64px; padding-bottom: 72px; }
+        .hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.3rem); font-weight: 800; margin-top: 14px; }
+        .hero h1 em { font-style: normal; color: var(--yellow); display: block; }
+        .hero .lead { font-size: 1.2rem; color: var(--muted); margin: 20px 0 30px; max-width: 520px; }
+        .hero .lead b { color: var(--white); }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+        .emergency { margin-top: 22px; display: inline-flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--muted); }
+        .emergency a { color: var(--white); font-weight: 700; text-decoration: none; }
+        .emergency .pulse { width: 10px; height: 10px; border-radius: 50%; background: #ef4444; box-shadow: 0 0 0 0 rgba(239,68,68,.6); animation: pulse 2s infinite; }
+        @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(239,68,68,0); } 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); } }
+        .hero-photo { position: relative; }
+        .hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 560px; object-fit: cover; object-position: center 60%; border-radius: 18px; box-shadow: 0 30px 60px rgba(0,0,0,.45); }
+        .hero-photo .stamp { position: absolute; left: -22px; bottom: 34px; background: var(--yellow); color: var(--black); width: 116px; height: 116px; border-radius: 50%; display: grid; place-items: center; text-align: center; font-family: 'Outfit', sans-serif; font-weight: 800; line-height: 1.05; font-size: 0.88rem; transform: rotate(-8deg); box-shadow: 0 12px 30px rgba(0,0,0,.4); }
+        .hero-photo .stamp b { display: block; font-size: 1.7rem; }
+        .hero-photo .cap { position: absolute; right: 14px; bottom: 14px; background: rgba(22,20,21,.85); font-size: 0.8rem; font-weight: 600; padding: 6px 10px; border-radius: 6px; }
 
-        .trades { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
-        .trade { background: var(--black-2); border: 1px solid var(--faint); border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; transition: border-color .15s; }
-        .trade:hover { border-color: var(--yellow); }
-        .trade h3 { font-size: 1.3rem; }
-        .trade h3 small { display: block; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--yellow); margin-bottom: 4px; }
-        .trade p { color: var(--muted); font-size: 0.95rem; flex: 1; }
-        .trade .meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; border-top: 1px solid var(--faint); padding-top: 12px; }
-        .trade .meta strong { color: var(--white); font-weight: 600; }
-        .trade .meta span { color: var(--yellow); font-weight: 500; }
+        /* trust strip */
+        .trust { background: var(--yellow); color: var(--black); }
+        .trust ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 34px; padding: 16px 0; font-weight: 700; font-size: 0.98rem; }
+        .trust li { display: flex; align-items: center; gap: 9px; }
+        .trust li::before { content: ""; width: 9px; height: 9px; background: var(--black); transform: rotate(45deg); }
 
-        .why { background: var(--black-2); }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
-        .why-item h3 { font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
-        .why-item h3::before { content: ""; width: 10px; height: 10px; background: var(--yellow); transform: rotate(45deg); flex: none; }
-        .why-item p { color: var(--muted); font-size: 0.95rem; }
+        .section { padding: 84px 0; }
+        .light { background: var(--cream); color: var(--black); }
+        .section-head { max-width: 680px; margin-bottom: 40px; }
+        .section-head h2 { font-size: clamp(2rem, 4.4vw, 3rem); font-weight: 800; margin-top: 10px; }
+        .section-head h2 em { font-style: normal; background: linear-gradient(transparent 60%, var(--yellow) 60%); padding: 0 4px; }
+        .section-head p { margin-top: 12px; font-size: 1.08rem; color: var(--ink-muted); }
 
-        .contact { text-align: center; }
-        .contact .big { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 6vw, 3rem); font-weight: 800; color: var(--yellow); text-decoration: none; display: inline-block; margin: 8px 0 20px; }
-        .contact p { color: var(--muted); max-width: 560px; margin: 0 auto 20px; }
+        /* trades */
+        .trades { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+        .trade { grid-column: span 2; background: var(--white); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s; }
+        .trade:nth-child(4), .trade:nth-child(5) { grid-column: span 3; }
+        .trade:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(22,20,21,.12); }
+        .trade .ph { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #ddd; }
+        .trade .ph img { width: 100%; height: 100%; object-fit: cover; }
+        .trade .ph .badge { position: absolute; left: 14px; top: 14px; width: 44px; height: 44px; border-radius: 10px; background: var(--yellow); color: var(--black); display: grid; place-items: center; box-shadow: 0 6px 14px rgba(0,0,0,.25); }
+        .trade .body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+        .trade .verb { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-ink); }
+        .trade h3 { font-size: 1.6rem; font-weight: 700; margin-top: 2px; }
+        .trade .tags { color: var(--ink-muted); margin-top: 6px; font-size: 0.98rem; }
+        .trade .tags i { font-style: normal; color: var(--yellow-dark); margin: 0 6px; }
+        .trade .foot { margin-top: auto; padding-top: 16px; display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--line); margin-top: 18px; }
+        .trade .foot a.tel { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.25rem; text-decoration: none; }
+        .trade .foot a.site { font-size: 0.9rem; font-weight: 600; color: var(--gold-ink); text-decoration: none; white-space: nowrap; }
+        .trade .foot a.site:hover { text-decoration: underline; }
 
-        footer { border-top: 1px solid var(--faint); padding: 28px 0; text-align: center; color: rgba(255,255,255,0.45); font-size: 0.85rem; }
+        /* how it works */
+        .how-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
+        .how-photo { position: relative; }
+        .how-photo .team { width: 100%; aspect-ratio: 4 / 5; max-height: 600px; object-fit: cover; object-position: center 35%; border-radius: 18px; }
+        .how-photo .cap { position: absolute; left: 14px; bottom: 14px; background: var(--black); font-size: 0.82rem; font-weight: 600; padding: 6px 10px; border-radius: 6px; }
+        .me { position: absolute; right: -18px; bottom: -34px; width: 170px; text-align: center; }
+        .me img { width: 100%; filter: drop-shadow(0 10px 18px rgba(0,0,0,.4)); }
+        .me .who { display: inline-block; margin-top: 6px; background: var(--yellow); color: var(--black); border-radius: 6px; padding: 5px 12px; font-weight: 800; font-size: 0.92rem; line-height: 1.25; }
+        .me .who span { display: block; font-weight: 600; font-size: 0.74rem; white-space: nowrap; }
+        .how h2 { font-size: clamp(2rem, 4.4vw, 3rem); font-weight: 800; margin-top: 10px; }
+        .how h2 em { font-style: normal; color: var(--yellow); }
+        .how .lead { color: var(--muted); font-size: 1.1rem; margin-top: 14px; }
+        .steps { margin-top: 30px; display: grid; gap: 14px; }
+        .step { display: grid; grid-template-columns: 52px 1fr; gap: 16px; align-items: center; background: var(--black-2); border: 1px solid var(--faint); border-radius: 14px; padding: 16px 18px; }
+        .step .n { width: 52px; height: 52px; border-radius: 50%; background: var(--yellow); color: var(--black); font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem; display: grid; place-items: center; }
+        .step h3 { font-size: 1.2rem; }
+        .step p { color: var(--muted); font-size: 0.98rem; }
+        .small-job { margin-top: 20px; display: flex; align-items: center; gap: 10px; font-weight: 600; }
+        .small-job::before { content: ""; width: 10px; height: 10px; background: var(--yellow); transform: rotate(45deg); }
 
-        @media (max-width: 700px) {
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero { padding: 48px 0 40px; }
-            .section { padding: 52px 0; }
+        /* matrix */
+        .matrix-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 16px; border: 1px solid var(--line); background: var(--white); }
+        table.matrix { width: 100%; min-width: 620px; border-collapse: collapse; }
+        .matrix th, .matrix td { padding: 15px 10px; text-align: center; border-bottom: 1px solid var(--line); }
+        .matrix tr:last-child td { border-bottom: 0; }
+        .matrix thead th { background: var(--black); color: var(--white); font-weight: 600; font-size: 0.86rem; }
+        .matrix thead th svg { display: block; margin: 0 auto 6px; color: var(--yellow); width: 22px; height: 22px; }
+        .matrix th:first-child, .matrix td:first-child { text-align: left; padding-left: 22px; font-weight: 600; }
+        .matrix tr.single td { background: #fffbea; }
+        .dot { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: var(--yellow); box-shadow: inset 0 0 0 2px var(--yellow-dark); }
+        .matrix-note { margin-top: 14px; color: var(--ink-muted); }
+
+        /* contact */
+        .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: stretch; }
+        .contact h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; margin-top: 10px; }
+        .contact h2 em { font-style: normal; color: var(--yellow); }
+        .contact .lead { color: var(--muted); font-size: 1.1rem; margin: 14px 0 26px; max-width: 520px; }
+        .lines { display: grid; gap: 12px; max-width: 520px; }
+        .line { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--black-2); border: 1px solid var(--faint); border-left: 4px solid var(--yellow); border-radius: 12px; padding: 16px 20px; text-decoration: none; transition: border-color .12s; }
+        .line:hover { border-color: var(--yellow); }
+        .line .lbl { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+        .line .num { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.45rem; white-space: nowrap; }
+        .line.hot { background: var(--yellow); color: var(--black); border-color: var(--yellow); }
+        .line.hot .lbl { color: var(--black); opacity: .75; }
+        .qrcard { background: var(--yellow); color: var(--black); border-radius: 18px; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        .qrcard .qr { background: var(--white); padding: 16px; border-radius: 14px; width: 220px; }
+        .qrcard h3 { font-size: 1.4rem; margin-top: 18px; }
+        .qrcard p { font-weight: 600; margin-top: 4px; }
+        .areas { margin-top: 28px; color: var(--muted); font-size: 0.95rem; }
+        .areas b { color: var(--white); }
+
+        footer { border-top: 1px solid var(--faint); padding: 34px 0; color: rgba(255,255,255,0.5); font-size: 0.88rem; }
+        footer .container { display: flex; flex-wrap: wrap; gap: 14px 30px; justify-content: space-between; }
+        footer .sites { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+        footer a { text-decoration: none; color: rgba(255,255,255,0.7); }
+        footer a:hover { color: var(--yellow); }
+
+        /* mobile call bar */
+        .callbar { display: none; }
+
+        @media (max-width: 960px) {
+            .hero-grid, .how-grid, .contact-grid { grid-template-columns: 1fr; }
+            .hero-grid { padding-top: 40px; padding-bottom: 56px; gap: 36px; }
+            .hero-photo img { aspect-ratio: 4 / 3; }
+            .hero-photo .stamp { left: auto; right: 12px; bottom: -26px; width: 96px; height: 96px; font-size: 0.76rem; }
+            .hero-photo .stamp b { font-size: 1.4rem; }
+            .hero-photo .cap { right: auto; left: 12px; }
+            .trades { grid-template-columns: 1fr 1fr; }
+            .trade, .trade:nth-child(4), .trade:nth-child(5) { grid-column: span 1; }
+            .trade:nth-child(5) { grid-column: span 2; }
+            .how-photo { max-width: 520px; }
+            .how-photo .team { aspect-ratio: 4 / 3; }
+            .me { right: 8px; width: 140px; }
+            .qrcard { display: none; }
+        }
+        @media (max-width: 640px) {
+            .topbar nav .btn-outline { display: none; }
+            .section { padding: 60px 0; }
             .trades { grid-template-columns: 1fr; }
+            .trade:nth-child(5) { grid-column: span 1; }
+            .trust ul { gap: 8px 18px; font-size: 0.9rem; }
+            .me { width: 118px; bottom: -28px; right: 6px; }
+            .me .who span { white-space: normal; }
+            .line .num { font-size: 1.2rem; }
+            body { padding-bottom: 72px; }
+            .callbar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(22,20,21,.96); border-top: 1px solid var(--faint); }
+            .callbar .btn { justify-content: center; padding: 12px; font-size: 0.95rem; }
         }
     </style>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <img class="mark" src="/assets/logo-mark.svg" alt="" width="120" height="122">
-            <h1>Cardiff &amp; Caerphilly<span>Group</span></h1>
-            <p class="lead">One local team for your whole home. Carpentry, construction, plumbing, electrical and landscaping, all from businesses that work together every day.</p>
-            <div class="actions">
-                <a class="btn btn-yellow" href="https://wa.me/447545514746">WhatsApp 07545 514746</a>
-                <a class="btn btn-outline" href="#trades">Find the right trade</a>
-            </div>
-        </div>
-    </header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+        <symbol id="i-con" viewBox="0 0 24 24"><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M14 6a6 6 0 0 1 6 6v3"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><rect x="2" y="15" width="20" height="4" rx="1"/></symbol>
+        <symbol id="i-carp" viewBox="0 0 24 24"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-1.13a6 6 0 0 0-2.623-.62H12.5l.9.9a1 1 0 0 1 .3.71v.96a1 1 0 0 1-.3.7L12 9l3 3 1.29-1.29a1 1 0 0 1 .7-.3h.96a1 1 0 0 1 .71.3l.9.9"/></symbol>
+        <symbol id="i-elec" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+        <symbol id="i-plumb" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+        <symbol id="i-land" viewBox="0 0 24 24"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+        <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></symbol>
+    </defs>
+</svg>
 
-    <div class="stats">
-        <div class="container stats-grid">
-            <div><span class="stat-num">5</span><span class="stat-label">Specialist trades</span></div>
-            <div><span class="stat-num">15+</span><span class="stat-label">Years experience</span></div>
-            <div><span class="stat-num">25+</span><span class="stat-label">Google reviews across the group</span></div>
-            <div><span class="stat-num">24/7</span><span class="stat-label">Emergency plumbing &amp; electrical</span></div>
+<header class="topbar">
+    <div class="container">
+        <a class="lockup" href="/" aria-label="Cardiff &amp; Caerphilly Group home">
+            <img src="/assets/logo-mark.svg" alt="" width="38" height="39">
+            <div class="name">Cardiff &amp;<br>Caerphilly<span>Group</span></div>
+        </a>
+        <nav>
+            <a class="btn btn-outline" href="tel:+447803083422"><svg class="i"><use href="#i-phone"/></svg>07803 083422</a>
+            <a class="btn btn-yellow" href="https://wa.me/447545514746"><svg class="i solid"><use href="#i-wa"/></svg>WhatsApp</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <img class="chev" src="/assets/logo-mark.svg" alt="">
+    <div class="container hero-grid">
+        <div>
+            <p class="eyebrow">Five specialist trades · one local team</p>
+            <h1>Your home, <em>from the ground up.</em></h1>
+            <p class="lead">Five specialists who work together across Cardiff and Caerphilly. <b>Call the one you need</b>, or let us join them up for a bigger job.</p>
+            <div class="actions">
+                <a class="btn btn-yellow" href="https://wa.me/447545514746"><svg class="i solid"><use href="#i-wa"/></svg>WhatsApp 07545 514746</a>
+                <a class="btn btn-outline" href="tel:+447803083422"><svg class="i"><use href="#i-phone"/></svg>Call direct 07803 083422</a>
+            </div>
+            <p class="emergency"><span class="pulse"></span>24hr emergency call-out: <a href="tel:+442921690437">029 2169 0437</a></p>
+        </div>
+        <div class="hero-photo">
+            <img src="/assets/images/kitchen-fitted-navy.webp" width="1200" height="1600" alt="A navy shaker kitchen with white worktops, fitted by our team">
+            <div class="stamp"><div><b>24hr</b>emergency<br>call-out</div></div>
+            <span class="cap">One of our kitchens</span>
         </div>
     </div>
+</section>
 
-    <section class="section" id="trades">
-        <div class="container">
-            <div class="section-header">
-                <p class="eyebrow">Our trades</p>
-                <h2>Pick the job, we'll send the right team</h2>
-                <p>Each business is a specialist in its own trade. When your job needs more than one, we sort it between us, so you're not chasing five different firms.</p>
-            </div>
-            <div class="trades">
-                <a class="trade" href="https://www.cardiffandcaerphillycarpentry.com">
-                    <h3><small>Carpentry</small>Cardiff &amp; Caerphilly Carpentry</h3>
-                    <p>Fitted wardrobes, alcove units, media walls, under-stairs storage, panelling and doors, made to measure.</p>
-                    <div class="meta"><strong>07803 083422</strong><span>Visit site &rarr;</span></div>
-                </a>
-                <a class="trade" href="https://www.cardiffandcaerphillyconstruction.co.uk">
-                    <h3><small>Construction</small>Cardiff &amp; Caerphilly Construction</h3>
-                    <p>Extensions, renovations, kitchens, bathrooms and structural work, run as one coordinated build.</p>
-                    <div class="meta"><strong>029 2169 0523</strong><span>Visit site &rarr;</span></div>
-                </a>
-                <a class="trade" href="https://www.cardiffandcaerphillyplumbers.com">
-                    <h3><small>Plumbing</small>Cardiff &amp; Caerphilly Plumbers</h3>
-                    <p>Emergency call-outs, boilers, leaks and complete bathroom installations.</p>
-                    <div class="meta"><strong>029 2169 0437</strong><span>Visit site &rarr;</span></div>
-                </a>
-                <a class="trade" href="https://www.cardiff-electricians.co.uk">
-                    <h3><small>Electrical</small>Cardiff &amp; Caerphilly Electricians</h3>
-                    <p>Rewires, consumer units, lighting, EV chargers and electrical safety checks.</p>
-                    <div class="meta"><strong>029 2169 0502</strong><span>Visit site &rarr;</span></div>
-                </a>
-                <a class="trade" href="https://www.cardiffandcaerphillylandscaping.co.uk">
-                    <h3><small>Landscaping</small>Cardiff &amp; Caerphilly Landscaping</h3>
-                    <p>Patios, fencing, decking, turf and garden design.</p>
-                    <div class="meta"><strong>029 2169 0437</strong><span>Visit site &rarr;</span></div>
-                </a>
+<div class="trust">
+    <ul class="container">
+        <li>15+ years</li>
+        <li>Free quotes</li>
+        <li>Fully insured</li>
+        <li>Gas Safe</li>
+        <li>24/7 emergency plumbing</li>
+        <li>25+ Google reviews</li>
+    </ul>
+</div>
+
+<section class="section light" id="trades">
+    <div class="container">
+        <div class="section-head">
+            <p class="eyebrow">Our trades</p>
+            <h2>Real work, by <em>local specialists.</em></h2>
+            <p>Each trade is its own dedicated business with its own skilled team. Every photo here is one of our jobs.</p>
+        </div>
+        <div class="trades">
+            <article class="trade">
+                <div class="ph"><img src="/assets/images/construction-extension-roath.webp" width="1200" height="900" loading="lazy" alt="A finished rear extension in Roath, Cardiff, with bifold doors and herringbone floor"><span class="badge"><svg class="i"><use href="#i-con"/></svg></span></div>
+                <div class="body">
+                    <div class="verb">Build it</div>
+                    <h3>Construction</h3>
+                    <div class="tags">Extensions<i>·</i>Lofts<i>·</i>Renovations</div>
+                    <div class="foot"><a class="tel" href="tel:+442921690523">029 2169 0523</a><a class="site" href="https://www.cardiffandcaerphillyconstruction.co.uk">Visit site &rarr;</a></div>
+                </div>
+            </article>
+            <article class="trade">
+                <div class="ph"><img src="/assets/images/carpentry-fitted-wardrobe.webp" width="1200" height="900" loading="lazy" alt="A run of grey shaker fitted wardrobes made to measure"><span class="badge"><svg class="i"><use href="#i-carp"/></svg></span></div>
+                <div class="body">
+                    <div class="verb">Fit it out</div>
+                    <h3>Carpentry</h3>
+                    <div class="tags">Wardrobes<i>·</i>Media walls<i>·</i>Storage</div>
+                    <div class="foot"><a class="tel" href="tel:+447803083422">07803 083422</a><a class="site" href="https://www.cardiffandcaerphillycarpentry.com">Visit site &rarr;</a></div>
+                </div>
+            </article>
+            <article class="trade">
+                <div class="ph"><img src="/assets/images/electrician-chasing-cable.webp" width="540" height="720" loading="lazy" alt="Our electrician chasing a wall for new cables during a rewire" style="object-position: center 30%"><span class="badge"><svg class="i solid"><use href="#i-elec"/></svg></span></div>
+                <div class="body">
+                    <div class="verb">Power it</div>
+                    <h3>Electricians</h3>
+                    <div class="tags">Rewires<i>·</i>Lighting<i>·</i>EV chargers</div>
+                    <div class="foot"><a class="tel" href="tel:+442921690502">029 2169 0502</a><a class="site" href="https://www.cardiff-electricians.co.uk">Visit site &rarr;</a></div>
+                </div>
+            </article>
+            <article class="trade">
+                <div class="ph"><img src="/assets/images/plumbing-bathroom-install.webp" width="750" height="1000" loading="lazy" alt="A new bathroom we installed in Cardiff, with walk-in shower and heated towel rail" style="object-position: center 60%"><span class="badge"><svg class="i"><use href="#i-plumb"/></svg></span></div>
+                <div class="body">
+                    <div class="verb">Plumb &amp; heat it</div>
+                    <h3>Plumbers</h3>
+                    <div class="tags">Leaks<i>·</i>Boilers<i>·</i>Bathrooms</div>
+                    <div class="foot"><a class="tel" href="tel:+442921690437">029 2169 0437</a><a class="site" href="https://www.cardiffandcaerphillyplumbers.com">Visit site &rarr;</a></div>
+                </div>
+            </article>
+            <article class="trade">
+                <div class="ph"><img src="/assets/images/landscaping-patio.webp" width="1200" height="1000" loading="lazy" alt="A new stone patio with a curved cobble border and planted borders"><span class="badge"><svg class="i"><use href="#i-land"/></svg></span></div>
+                <div class="body">
+                    <div class="verb">Finish outside</div>
+                    <h3>Landscaping</h3>
+                    <div class="tags">Patios<i>·</i>Fencing<i>·</i>Gardens</div>
+                    <div class="foot"><a class="tel" href="tel:+442921690437">029 2169 0437</a><a class="site" href="https://www.cardiffandcaerphillylandscaping.co.uk">Visit site &rarr;</a></div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section how" id="how">
+    <div class="container how-grid">
+        <div class="how-photo">
+            <img class="team" src="/assets/images/team-at-work.webp" width="750" height="1000" loading="lazy" alt="One of our team fitting a kitchen">
+            <span class="cap">Our team at work</span>
+            <div class="me">
+                <img src="/assets/images/jonathan-badge.webp" width="480" height="480" loading="lazy" alt="Jonathan from the Cardiff &amp; Caerphilly Group">
+                <div class="who">Jonathan<span>Cardiff &amp; Caerphilly Group</span></div>
             </div>
         </div>
-    </section>
-
-    <section class="section why">
-        <div class="container">
-            <div class="section-header">
-                <p class="eyebrow">Why one group</p>
-                <h2>One team, not a chain of subcontractors</h2>
+        <div>
+            <p class="eyebrow">How it works</p>
+            <h2>One message. <em>The right specialist.</em></h2>
+            <p class="lead">Every job is done by the trade that specialises in it. Bigger project? Our trades already work together, so you're not chasing five different firms.</p>
+            <div class="steps">
+                <div class="step"><div class="n">1</div><div><h3>Send us the job</h3><p>WhatsApp a photo, or call.</p></div></div>
+                <div class="step"><div class="n">2</div><div><h3>We pick the trade</h3><p>The right specialist quotes for free.</p></div></div>
+                <div class="step"><div class="n">3</div><div><h3>Bigger job? One team</h3><p>We plan the trades for you, in the right order.</p></div></div>
             </div>
-            <div class="why-grid">
-                <div class="why-item">
-                    <h3>One number to start</h3>
-                    <p>Message us on WhatsApp and we'll pass you to the right trade, or bring in more than one if the job needs it.</p>
-                </div>
-                <div class="why-item">
-                    <h3>Trades that know each other</h3>
-                    <p>The carpenter, plumber and electrician on your job already work together, so the order of work is planned, not guessed.</p>
-                </div>
-                <div class="why-item">
-                    <h3>Local to you</h3>
-                    <p>Based in and working across Cardiff and Caerphilly. If you've seen our uniform on your street, this is us.</p>
-                </div>
-            </div>
+            <p class="small-job">Small job? You only get the one trade you need.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section contact" id="contact">
-        <div class="container">
+<section class="section light" id="who">
+    <div class="container">
+        <div class="section-head">
+            <p class="eyebrow">Who works on what</p>
+            <h2>Bigger jobs, <em>one joined-up team.</em></h2>
+        </div>
+        <div class="matrix-wrap">
+            <table class="matrix">
+                <thead>
+                    <tr>
+                        <th>Your job</th>
+                        <th><svg class="i"><use href="#i-con"/></svg>Build</th>
+                        <th><svg class="i"><use href="#i-carp"/></svg>Carpentry</th>
+                        <th><svg class="i solid"><use href="#i-elec"/></svg>Electrical</th>
+                        <th><svg class="i"><use href="#i-plumb"/></svg>Plumbing</th>
+                        <th><svg class="i"><use href="#i-land"/></svg>Outside</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Extension</td><td><span class="dot"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td></tr>
+                    <tr><td>Kitchen</td><td><span class="dot"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td><td></td></tr>
+                    <tr><td>Loft conversion</td><td><span class="dot"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td><td></td><td></td></tr>
+                    <tr><td>Bathroom</td><td></td><td></td><td><span class="dot"></span></td><td><span class="dot"></span></td><td></td></tr>
+                    <tr><td>Garden</td><td></td><td></td><td><span class="dot"></span></td><td></td><td><span class="dot"></span></td></tr>
+                    <tr class="single"><td>Burst pipe</td><td></td><td></td><td></td><td><span class="dot"></span></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="matrix-note">Small job? You only get the one trade you need.</p>
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <div class="container contact-grid">
+        <div>
             <p class="eyebrow">Get in touch</p>
-            <a class="big" href="https://wa.me/447545514746">07545 514746</a>
-            <p>WhatsApp us with a photo or a quick description of the job and we'll come back to you. Or call the trade you need directly using the numbers above.</p>
-            <div class="actions">
-                <a class="btn btn-yellow" href="https://wa.me/447545514746">Message us on WhatsApp</a>
+            <h2>Talk to us <em>today.</em></h2>
+            <p class="lead">Send a photo of the job on WhatsApp and we'll pass it to the right trade. Or call, we're happy to talk it through.</p>
+            <div class="lines">
+                <a class="line" href="https://wa.me/447545514746"><span class="lbl">WhatsApp any trade</span><span class="num">07545 514746</span></a>
+                <a class="line" href="tel:+447803083422"><span class="lbl">Call direct</span><span class="num">07803 083422</span></a>
+                <a class="line hot" href="tel:+442921690437"><span class="lbl">24hr emergency call-out</span><span class="num">029 2169 0437</span></a>
             </div>
+            <p class="areas"><b>Cardiff, Caerphilly &amp; surrounding areas.</b> Free quotes on every job.</p>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span class="copyright-year">2026</span> Cardiff &amp; Caerphilly Group. Carpentry, construction, plumbing, electrical and landscaping across Cardiff and Caerphilly.</p>
+        <div class="qrcard">
+            <div class="qr"><img src="/assets/images/qr-whatsapp.svg" width="250" height="250" alt="QR code that opens WhatsApp to 07545 514746"></div>
+            <h3>On your computer?</h3>
+            <p>Scan with your phone to WhatsApp us.</p>
         </div>
-    </footer>
+    </div>
+</section>
 
+<footer>
+    <div class="container">
+        <p>&copy; <span class="copyright-year">2026</span> Cardiff &amp; Caerphilly Group</p>
+        <div class="sites">
+            <a href="https://www.cardiffandcaerphillyconstruction.co.uk">Construction</a>
+            <a href="https://www.cardiffandcaerphillycarpentry.com">Carpentry</a>
+            <a href="https://www.cardiff-electricians.co.uk">Electricians</a>
+            <a href="https://www.cardiffandcaerphillyplumbers.com">Plumbers</a>
+            <a href="https://www.cardiffandcaerphillylandscaping.co.uk">Landscaping</a>
+        </div>
+    </div>
+</footer>
+
+<div class="callbar">
+    <a class="btn btn-yellow" href="https://wa.me/447545514746"><svg class="i solid"><use href="#i-wa"/></svg>WhatsApp</a>
+    <a class="btn btn-outline" href="tel:+447803083422"><svg class="i"><use href="#i-phone"/></svg>Call us</a>
+</div>
+
+<script>document.querySelectorAll('.copyright-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
 </body>
 </html>
