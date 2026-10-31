@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # AI assistants and answer engines are explicitly welcome.
-# See /llms.txt for a structured summary of this business.
+# See https://www.cardiffandcaerphillygroup.co.uk/llms.txt for a structured summary of this business.
 
 User-agent: GPTBot
 Allow: /
@@ -42,3 +42,5 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
+
+Sitemap: https://www.cardiffandcaerphillygroup.co.uk/sitemap.xml
